@@ -3,12 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 //Import Container component
-import AppContainer from './containers/appContainer'
+import Page1 from './containers/page1'
 
 class App extends React.Component {
   render () {
     return (
-      <AppContainer />
+      <Page1 />
     );
   }
 }

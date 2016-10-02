@@ -18,7 +18,7 @@ function createWindow () {
     width: 500,
     height: 500,
     maximizeable: false,
-    icon:'public/img/logo.png'
+    icon:'app/assets/logo.png'
   }
   // Create the browser window.
   mainWindow = new BrowserWindow(browserOptions);
