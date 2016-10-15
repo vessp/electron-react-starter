@@ -1,5 +1,6 @@
-import React from 'react';
-import Component1 from '../components/Component1';
+import React from 'react'
+import Component1 from '../components/Component1'
+import WebSocketComponent from '../components/WebSocketComponent'
 
 class Page1 extends React.Component {
 
@@ -18,6 +19,7 @@ class Page1 extends React.Component {
         return (
             <div className="page1">
                 <Component1/>
+                <WebSocketComponent/>
             </div>
         );
     }
