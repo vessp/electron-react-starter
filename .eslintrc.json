@@ -18,7 +18,7 @@
         "indent": ["warn", 4],
         "quotes": ["warn", "single"],
         "semi": ["warn","never"],
-        "no-unused-vars": ["warn"],
+        "no-unused-vars": "off",
         "no-console": "off"
     }
 }

@@ -19,6 +19,7 @@
     "bootstrap": "^4.0.0-alpha.4",
     "bootstrap-sass": "^3.3.7",
     "classnames": "^2.2.3",
+    "electron-packager": "^8.1.0",
     "electron-prebuilt": "^0.36.0",
     "electron-reload": "^0.2.0",
     "jquery": "^2.2.3",
@@ -27,7 +28,8 @@
     "react-autocomplete": "^1.0.0-rc2",
     "react-dom": "^0.14.7",
     "react-sound": "^0.4.0",
-    "soundmanager2": "^2.97.20150601-a"
+    "soundmanager2": "^2.97.20150601-a",
+    "watchify": "^3.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",
