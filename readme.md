@@ -1,7 +1,8 @@
-1. clone project (git clone https://github.com/vessp/electron-react-starter.git)
-2. cd into project folder
-3. npm install
-4. npm start (watches for changes in your files to auto refresh the running app)
+-clone project (git clone https://github.com/vessp/electron-react-starter.git)
+-use gitbash to cd into project folder
+-cd C:/Users/shard/Documents/GitHub/electron-react-starter (needs forward slashes)
+-npm install (reads package.json and fills node_modules folder)
+-npm start (watches for changes in your files to auto refresh the running app)
 
 
 Included libraries you can use:
@@ -12,3 +13,13 @@ Included libraries you can use:
     -sublime linter eslint contrib
     -.eslintrc.json
     -http://eslint.org/docs/rules/
+
+
+
+
+
+GITBASH (command line tool)
+CTRL+C 						cancel command
+cd c:/users/shard/			c:/users/shard/ (must use /)
+
+
