@@ -31,4 +31,20 @@ class Component1 extends React.Component {
 
 }
 
-export default Component1
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actions from '../redux/actions'
+export default connect(
+    (state) => {
+        //map store to props
+        return {
+            myCounter: state.app.myCounter
+        }
+    },
+    (dispatch) => {
+        //map dispatch to props
+        return {
+            actions: bindActionCreators(actions, dispatch)
+        }
+    }
+)(Component1)
