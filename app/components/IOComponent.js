@@ -1,29 +1,31 @@
 import React from 'react'
-import Component1 from '../components/Component1'
-import WebSocketComponent from '../components/WebSocketComponent'
-import IOComponent from '../components/IOComponent'
+const electron = window.require('electron')
+const fs = window.require('fs')
 
-class Page1 extends React.Component {
-
+class IOComponent extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-      
+
         }
     }
 
     componentDidMount() {
-        this.props.actions.init()
+        
     }
 
-    render () {
-        const {myCounter, actions} = this.props
+    makeDir() {
+        fs.mkdir(this.props.projectDir + '/newDir')
+    }
+
+    render(){
+        const {projectDir} = this.props
 
         return (
-            <div className="page1">
-                <Component1/>
-                <WebSocketComponent/>
-                <IOComponent/>
+            <div className="alert alert-info">
+                <h1>IOComponent</h1>
+                <div>{projectDir}</div>
+                <button onClick={this.makeDir.bind(this)}>Make Dir</button>
             </div>
         )
     }
@@ -36,7 +38,7 @@ export default connect(
     (state) => {
         //map store to props
         return {
-            myCounter: state.app.myCounter
+            projectDir: state.app.projectDir
         }
     },
     (dispatch) => {
@@ -45,4 +47,4 @@ export default connect(
             actions: bindActionCreators(actions, dispatch)
         }
     }
-)(Page1)
+)(IOComponent)

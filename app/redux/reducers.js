@@ -1,7 +1,6 @@
-// import { VisibilityFilters } from './actions'
-
 const initialState = {
-    myCounter: 0
+    myCounter: 0,
+    projectDir: __dirname
 }
 
 function appReducer(state = initialState, action) {
@@ -9,6 +8,10 @@ function appReducer(state = initialState, action) {
     case 'myCounter':
         return Object.assign({}, state, {
             myCounter: action.payload
+        })
+    case 'projectDir':
+        return Object.assign({}, state, {
+            projectDir: action.payload
         })
     default:
         return state

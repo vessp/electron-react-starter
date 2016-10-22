@@ -2,15 +2,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import promiseMiddleware from 'redux-promise-middleware'
+import thunkMiddleware from 'redux-thunk'
+
 import appReducer from './redux/reducers'
 
 const reducers = combineReducers({
     app:appReducer
 })
 
-const store = createStore(reducers)
+const store = createStore(reducers, {}, applyMiddleware(
+  thunkMiddleware,
+  promiseMiddleware()
+))
 
 //Import Container component
 import Page1 from './containers/page1'

@@ -19,7 +19,7 @@ class Component1 extends React.Component {
 
     render(){
         return (
-            <div className="comp1">
+            <div className="comp1 alert alert-danger">
                 <div className="comp1-content">
                     <h1>Component1</h1>
                     <button onClick={this.doRequest.bind(this)}><i className="fa fa-play"></i></button>
