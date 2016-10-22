@@ -20,7 +20,6 @@ class Page1 extends React.Component {
 
         return (
             <div className="page1">
-                <button onClick={() => actions.setMyCounter(myCounter+1)}>increment</button>
                 <Component1/>
                 <WebSocketComponent/>
             </div>
