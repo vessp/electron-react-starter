@@ -9,7 +9,9 @@
     "show": "electron ./app/main.js",
     "watch:js": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose",
     "watch:css": "node-sass -wr app/scss/app.scss -o public/css/",
-    "start": "concurrently --kill-others \"npm run watch:js\" \"npm run watch:css\" \"npm run show\""
+    "start": "concurrently --kill-others \"npm run watch:js\" \"npm run watch:css\" \"npm run show\"",
+	"gen:dir": "mkdir public public\\js public\\css",
+    "run:css": "node-sass app/scss/app.scss -o public/css/"
   },
   "dependencies": {
     "axios": "^0.9.1",
