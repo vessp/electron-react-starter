@@ -18,6 +18,10 @@ class IOComponent extends React.Component {
         fs.mkdir(this.props.projectDir + '/newDir')
     }
 
+    writeTextFile() {
+        fs.writeFile(this.props.projectDir + '/newFile.txt')
+    }
+
     render(){
         const {projectDir} = this.props
 

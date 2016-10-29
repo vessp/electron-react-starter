@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const electron = require('electron')
 // Module to control application life.
@@ -7,7 +7,7 @@ const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const ipcMain = electron.ipcMain
 
-require('electron-reload')(__dirname+'/public/js')
+require('electron-reload')(__dirname+'/bin')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -67,7 +67,7 @@ app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') {
         app.quit()
     }
-});
+})
 
 app.on('activate', function () {
     // On OS X it's common to re-create a window in the app when the

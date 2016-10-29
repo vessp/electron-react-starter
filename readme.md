@@ -1,4 +1,6 @@
 -install node.js
+-install gulp globally
+  -npm install -g gulp
 -install con emu
 	-tasks -> bash gitbash []default task for new console
 	-quake style -> []quake
