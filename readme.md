@@ -10,6 +10,9 @@
 	C:/Users/jonty.roodnick/Documents/GitHub/electron-react-starter
 -sh first-run.sh (after first run can just type 'gulp')
 
+TASK:
+> -cur_console:f -cur_console:d:C:\Users\shard\Documents\GitHub\electron-react-starter "C:\Program Files\Git\bin\sh.exe" --login -i
+
 
 Included libraries you can use:
   -React: https://facebook.github.io/react/
