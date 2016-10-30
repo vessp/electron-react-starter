@@ -6,7 +6,6 @@
   "main": "main.js",
   "scripts": {
     "test": "npm test",
-    "show": "electron ./app/main.js",
     "start": "electron ./app/main.js"
   },
   "dependencies": {

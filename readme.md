@@ -1,6 +1,4 @@
 -install node.js
--install gulp globally
-  -npm install -g gulp
 -install con emu
 	-tasks -> bash gitbash []default task for new console
 	-quake style -> []quake
@@ -10,11 +8,7 @@
 -use gitbash to cd into project folder
 -cd C:/Users/shard/Documents/GitHub/electron-react-starter (needs forward slashes)
 	C:/Users/jonty.roodnick/Documents/GitHub/electron-react-starter
--npm install (reads package.json and fills node_modules folder)
--mkdir public public/js public/css (make public and js css folder inside)
--npm run watch:js (creates file inside 8s)
-open app/scss/app.scss and save it
--npm start (watches for changes in your files to auto refresh the running app)
+-sh first-run.sh (after first run can just type 'gulp')
 
 
 Included libraries you can use:
