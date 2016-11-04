@@ -29,7 +29,9 @@ gulp.task('js', function() {
     var bundler = browserify('./app/app.js', { debug: true })
         .transform(babelify, { /* options */ })
     return bundler.bundle()
-        .on('error', function(err) { console.error(err); this.emit('end'); })
+        .on('error', notify.onError(function (error) {
+                return 'Error: ' + error.message
+         }))
         .pipe(source('bundle.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init({ loadMaps: true }))
@@ -42,7 +44,9 @@ gulp.task('css', function() {
     return gulp.src('./app/scss/app.scss')
         .pipe(
             sass({
-                includePaths: './app/scss',
+                includePaths: [
+                    './app/scss',
+                ],
                 style: 'compressed',
                 loadPath: []
             })

@@ -5,6 +5,10 @@ export function setMyCounter(val) {
     return { type: 'myCounter', payload: val }
 }
 
+export function setPlaylist(val) {
+    return { type: 'playlist', payload: val }
+}
+
 export function init() {
     return (dispatch, getState) => {
         ipcRenderer.on('projectDir', (event, val) => {

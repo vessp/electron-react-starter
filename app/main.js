@@ -7,7 +7,14 @@ const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const ipcMain = electron.ipcMain
 
-require('electron-reload')(__dirname+'/bin')
+//Project Dir
+//__dirname = 'k:\Ghubs\electron-react-starter\app'
+let dirParts = __dirname.split('\\')
+dirParts.pop()
+const projectDir = dirParts.join('\\')
+// console.log(projectDir)
+
+require('electron-reload')(projectDir+'\\bin')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -16,10 +23,6 @@ let mainWindow
 //console.log(app.getPath('userData')) //C:\Users\Vessp\AppData\Roaming\Electron
 
 ipcMain.on('projectDir', (event, arg) => {
-    //__dirname = 'k:\Ghubs\electron-react-starter\app'
-    let parts = __dirname.split('\\')
-    parts.pop()
-    let projectDir = parts.join('\\')
     event.sender.send('projectDir', projectDir)
 })
 

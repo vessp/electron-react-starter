@@ -9,7 +9,8 @@ class WebSocketComponent extends React.Component {
     }
 
     componentDidMount() {
-        this.socket = new WebSocket('ws://vessp-node-starter.herokuapp.com')
+        // this.socket = new WebSocket('ws://vessp-node-starter.herokuapp.com')
+        this.socket = new WebSocket('ws://kankei.herokuapp.com/')
         this.socket.onopen = (event) => {
             this.setState({socketEvents:[...this.state.socketEvents, event]})
         }
@@ -18,6 +19,13 @@ class WebSocketComponent extends React.Component {
         }
         this.socket.onmessage = (event) => {
             this.setState({socketEvents:[...this.state.socketEvents, event]})
+            if(event.data) {
+                const data = JSON.parse(event.data)
+                if(data.type == 'playlist') {
+                    this.props.actions.setPlaylist(data.message)
+                }
+            }
+            
         }
         this.socket.onerror = (event) => {
             this.setState({socketEvents:[...this.state.socketEvents, event]})
@@ -25,6 +33,7 @@ class WebSocketComponent extends React.Component {
     }
 
     sendMessage() {
+
         this.socket.send(JSON.stringify({
             type: 'myType',
             payload: 'myPayload'

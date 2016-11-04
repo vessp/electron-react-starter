@@ -13,6 +13,10 @@ function appReducer(state = initialState, action) {
         return Object.assign({}, state, {
             projectDir: action.payload
         })
+    case 'playlist':
+        return Object.assign({}, state, {
+            playlist: action.payload
+        })
     default:
         return state
     }

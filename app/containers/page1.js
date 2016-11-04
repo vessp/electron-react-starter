@@ -2,6 +2,7 @@ import React from 'react'
 import Component1 from '../components/Component1'
 import WebSocketComponent from '../components/WebSocketComponent'
 import IOComponent from '../components/IOComponent'
+import SoundComponent from '../components/SoundComponent'
 
 class Page1 extends React.Component {
 
@@ -24,6 +25,7 @@ class Page1 extends React.Component {
                 <Component1/>
                 <WebSocketComponent/>
                 <IOComponent/>
+                <SoundComponent/>
             </div>
         )
     }
