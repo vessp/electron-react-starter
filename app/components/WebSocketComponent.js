@@ -10,7 +10,8 @@ class WebSocketComponent extends React.Component {
 
     componentDidMount() {
         // this.socket = new WebSocket('ws://vessp-node-starter.herokuapp.com')
-        this.socket = new WebSocket('ws://kankei.herokuapp.com/')
+        // this.socket = new WebSocket('ws://kankei.herokuapp.com/')
+        this.socket = new WebSocket('ws://localhost:3000')
         this.socket.onopen = (event) => {
             this.setState({socketEvents:[...this.state.socketEvents, event]})
         }
@@ -33,7 +34,6 @@ class WebSocketComponent extends React.Component {
     }
 
     sendMessage() {
-
         this.socket.send(JSON.stringify({
             type: 'myType',
             payload: 'myPayload'

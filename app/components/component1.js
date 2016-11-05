@@ -1,5 +1,5 @@
 import React from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 
 class Component1 extends React.Component {
     constructor(props) {
@@ -8,7 +8,7 @@ class Component1 extends React.Component {
 
     doRequest() {
         alert('button clicked')
-        Axios.get('http://httpstat.us/200')
+        axios.get('http://httpstat.us/200')
             .then(function (response) {
                 console.log('response', response)
             })

@@ -1,6 +1,8 @@
 const initialState = {
     myCounter: 0,
-    projectDir: __dirname
+    projectDir: __dirname,
+    isSocketConnected: false,
+    activePlay: ''
 }
 
 function appReducer(state = initialState, action) {
@@ -13,9 +15,17 @@ function appReducer(state = initialState, action) {
         return Object.assign({}, state, {
             projectDir: action.payload
         })
+    case 'isSocketConnected':
+        return Object.assign({}, state, {
+            isSocketConnected: action.payload
+        })
     case 'playlist':
         return Object.assign({}, state, {
             playlist: action.payload
+        })
+    case 'activePlay':
+        return Object.assign({}, state, {
+            activePlay: action.payload
         })
     default:
         return state

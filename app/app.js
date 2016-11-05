@@ -20,12 +20,13 @@ const store = createStore(reducers, {}, applyMiddleware(
 
 //Import Container component
 import Page1 from './containers/page1'
+import Home from './containers/Home'
 
 class App extends React.Component {
     render () {
         return (
             <Provider store={store}>
-                <Page1 />
+                <Home />
             </Provider>
         )
     }
